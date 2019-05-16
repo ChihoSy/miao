@@ -7,16 +7,23 @@
     <style>
       /* YOUR STYLE GOES HERE */
       /* 不得改变页面的任何html结构 */
-      body>p:first-child{
+
+      /* body>p:first-child{
+        color:red;
+      } */
+      body>p:first-of-type{
         color:red;
       }
-      p.a:nth-child(2):hover{
-        color:red;
-      }
+      /* [tabindex="-1"]:focus{
+        color:blue;
+      } */
       p.a:nth-child(2):focus{
         color:blue;
       }
-      /* focus要放在active前面 */
+      /* focus要放在hover、active前面 */
+      p.a:nth-child(2):hover{
+        color:red;
+      }
       p.a:nth-child(2):active{
         color:green;
       }

@@ -17,11 +17,14 @@
       width:600px;
       margin: auto;
     }
-    .content{
+    div.content{
       width:600px;
       margin:auto;
     }
-    .content section div{
+    ul.products{
+      padding:0;
+    }
+    ul.products li{
       width:174px;
       height:34px;
       border:3px solid;
@@ -29,16 +32,16 @@
       background-color: #ffc0cb;
       text-align:center;
       line-height:34px;
+      list-style-type:none;
     }
-    .content section div:hover{
+    ul.products li:hover{
       background-color:red;
     }
-    .content section div:nth-of-type(3n+2){
+    ul.products li:nth-of-type(3n+2){
       margin-left:210px;
       margin-top:-55px;
-      
     }
-    .content section div:nth-of-type(3n+3){
+    ul.products li:nth-of-type(3n+3){
       margin-left:420px;
       margin-top:-55px;
     }
@@ -65,29 +68,30 @@
 
 </head>
 <body>
+  <div>
+    <header>
+      <p>hello world 请调整浏览器窗口大小查看效果</p>
+    </header>
 
-  <header>
-    <p>hello world 请调整浏览器窗口大小查看效果</p>
-  </header>
-
-  <div class="content">
-    <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
-    <section>
-      <div>宽180高40(包含边框)</div>
-      <div>产品</div>
-      <div>产品</div>
-      <div>水平间隙30px</div>
-      <div>产品</div>
-      <div>产品</div>
-      <div>垂直间隙15px</div>
-      <div>产品</div>
-      <div>产品</div>
-      <div>边框宽度3px</div>
-      <div>产品</div>
-      <div>产品</div>
-    </section>
-    <div class="link">
-      <ul>
+    <div class="content">
+      <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
+      
+      <ul class="products">
+        <li>宽180高40(包含边框)</li>
+        <li>产品</li>
+        <li>产品</li>
+        <li>水平间隙30px</li>
+        <li>产品</li>
+        <li>产品</li>
+        <li>垂直间隙15px</li>
+        <li>产品</li>
+        <li>产品</li>
+        <li>边框宽度3px</li>
+        <li>产品</li>
+        <li>产品</li>
+      </ul>
+      
+      <ul class="link">
         <li>link</li>
         <li>link</li>
         <li>link</li>
@@ -95,11 +99,11 @@
         <li>link</li>
       </ul>
     </div>
-  </div>
 
-  <footer>
-      <p>©版权所有</p>
-      <p>本页所有布局均使用块元素</p>
-  </footer>
+    <footer>
+        <p>©版权所有</p>
+        <p>本页所有布局均使用块元素</p>
+    </footer>
+  </div>
 </body>
 </html>

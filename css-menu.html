@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>级联菜单</title>
+  <style>
+    ul{
+      list-style-type:none;
+      padding:0;
+    }
+    li{
+      white-space: nowrap;
+      position:relative;
+      /* border:1px solid; */
+      background-color: rgb(255, 198, 200);
+      height:30px;
+      line-height: 30px;
+    }
+    /* 一级菜单设置浮动 */
+    ul.menu>li{
+      float:left;
+      width:70px;
+      text-align: center;
+    }
+    /* 仅第二级菜单位置为正下方 */
+    ul.menu>li>ul{
+      position:absolute;
+      left:0;
+      top:100%;
+    }
+    /* 除第一、二级菜单外，其余菜单为正右方向 */
+    /* 此处击中除一级菜单外的其余菜单 */
+    /* ul ul{ 
+      position:absolute;
+      left:100%;
+      top:0;
+      text-align:left;
+    } */
+
+    /* 除一级菜单的所有li */
+    /* ul ul li{
+      display: none;
+      padding-right:30px;
+    } */
+    ul ul ul::before{
+      content:'>';
+      position: absolute;
+      left: -1em;
+    }
+    li:hover{
+      background-color: rgb(255, 164, 0);
+    }
+    /* li:hover>ul>li{
+      display: block;
+    } */
+
+    /* 以下三个为渐变显示效果
+    opacity为透明度
+    pointer-events:none为阻止鼠标事件 */
+    ul ul{ 
+      position:absolute;
+      left:100%;
+      top:0;
+      text-align:left;
+      pointer-events: none;
+    }
+    ul ul li{
+      padding-right:30px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.6s;
+    }
+    li:hover>ul>li{
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+
+</head>
+<body>
+  <ul class="menu">
+    <li>文件
+      <ul>
+        <li>新建文件</li>
+        <li>新建窗口</li>
+        <li>首选项
+          <ul>
+            <li>设置
+              <ul>
+                <li>设置一</li>
+                <li>设置二</li>
+              </ul>
+            </li>
+            <li>扩展</li>
+            <li>颜色主题</li>
+          </ul>
+        </li>
+        <li>保存</li>
+      </ul>
+    </li>
+    <li>编辑
+      <ul>
+        <li>撤销
+          <ul>
+            <li>向前撤消</li>
+            <li>向后撤销</li>
+          </ul>
+        </li>
+        <li>查找</li>
+        <li>替换</li>
+      </ul>
+    </li>
+    <li>选择
+      <ul>
+        <li>全选
+          <ul>
+            <li>选择一</li>
+            <li>选择二</li>
+            <li>选择三</li>
+          </ul>
+        </li>
+        <li>展开选定内容</li>
+        <li>缩小选定范围</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>

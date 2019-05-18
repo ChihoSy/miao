@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>QQ-Mail行内+块级,不用定位</title>
+  <style>
+    html{
+      height:100%;
+      width: 100%;
+    }
+    body{
+      margin:0;
+      height:100%;
+      width: 100%;
+      white-space: nowrap;
+    }
+    header{
+      /* border:1px solid; */
+      width: 100%;
+      height: 60px;
+      /* position: relative; */
+      min-width: 600px;
+    }
+    .header-info{
+      /* border:1px solid; */
+      display:inline-block;
+      font-size:15px;
+      vertical-align: 80%;
+    }
+    .header-info a{
+      font-size:12px;
+    }
+    .header-right{
+      font-size: 12px;
+      /* vertical-align: 60%; */
+      float:right;
+    }
+    .big-main{
+      /* border-right:0; */
+      height:calc(100% - 70px);
+      width: calc(100% - 15px);
+      min-width: 600px;
+      min-height: 600px;
+      margin:5px 0 0 5px;
+    }
+    aside{
+      display: inline-block;
+      border: 5px solid rgb(80, 151, 238);
+      border-radius: 10px;
+      width:200px;
+      /* height: 98.5%; */
+      height:calc(100% - 10px);
+    }
+    aside ul{
+      list-style-type: none;
+      padding-left:20px;
+    }
+    aside li{
+      margin-right:5px;
+    }
+    aside .aside-top{
+      border: 5px solid rgb(80, 151, 238);
+      border-radius: 10px;
+      width:180px;
+      margin:-5px;
+      padding-top:10px;
+      padding-bottom:10px;
+    }
+    aside .aside-bottom{
+      border-top: 5px solid rgb(80, 151, 238);
+      border-radius: 10px;
+      margin: -5px;
+      padding-top:10px;
+    }
+    main{
+      display: inline-block;
+      border: 5px solid rgb(80, 151, 238);
+      border-radius: 10px;
+      border-right: 0;
+      /* height: 98.5%; */
+      height:calc(100% - 10px);
+      vertical-align: top;
+      width:calc(100% - 210px);
+      overflow:auto;
+    }
+    li:hover{
+      background-color: rgb(224, 236, 249);
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <img src="https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/logo/logo_0_01f1927.png" alt="">
+    <div class="header-info">
+      <b>username</b>&lt;<span>email</span>&gt;<br>
+      <a href="">邮箱首页</a>&nbsp;|&nbsp;
+      <a href="">设置</a>&nbsp;-&nbsp;
+      <a href="">换肤</a>
+    </div>
+    <div class="header-right">
+      <div class="right">
+        <a href=""><img src="https://www.easyicon.net/api/resizeApi.php?id=1228620&size=16" alt="" width="8px" ></a>
+        &nbsp;|&nbsp;
+        <a href="">反馈建议</a>
+        &nbsp;|&nbsp;
+        <a href="">帮助中心</a>
+        &nbsp;|&nbsp;
+        <a href="">退出</a>
+        &nbsp;
+      </div>
+      <br>
+      <form action="" class="search-box">
+        <input type="text" placeholder="邮件全文搜索...">
+        <button type="submit">搜索</button>
+      </form>
+    </div>
+  </header>
+
+  <div class="big-main">
+    <aside>
+      <ul class="aside-top">
+        <li><a href="">写信</a></li>
+        <li><a href="">收信</a></li>
+        <li><a href="">通讯录</a></li>
+      </ul>
+      <ul class="aside-bottom">
+        <li><a href="">收件箱(number)</a></li>
+        <li><a href="">星标邮件</a></li>
+        <li><a href="">群邮件</a></li>
+        <li><a href="">草稿箱</a></li>
+        <li><a href="">已发送</a></li>
+        <li><a href="">已删除</a><a href="">[清空]</a></li>
+        <li><a href="">垃圾箱</a><a href="">[清空]</a></li>
+        <li><a href="">QQ邮件订阅</a></li>
+  
+        <li><a href="">其他邮箱</a></li>
+  
+        <li><a href="">漂流瓶</a></li>
+        <li><a href="">日历</a>&nbsp;|&nbsp;<a href="">记事本</a></li>
+        <li><a href="">在线文档</a></li>
+        <li><a href="">附件收藏</a></li>
+        <li><a href="">文件中转站</a></li>
+        <li><a href="">贺卡</a>&nbsp;|&nbsp;<a href="">明信片</a></li>
+        <li><a href="">阅读空间</a></li>
+      </ul>
+    </aside>
+    <main>
+      <p>下午好，<a href="">username</a></p>
+      <p>邮件：number1封未读邮件，number2封星标邮件</p>
+      <br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>
+      haha
+      <br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>
+      haha
+      <br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>
+      haha
+      <br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>
+      haha
+    </main>
+  </div>
+
+</body>
+</html>

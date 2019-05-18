@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html{
+      width: 100%;
+      height: 100%;
+    }
+    body{
+      width: 100%;
+      height: 100%;
+      margin:0;
+    }
+    header{
+      position:relative;
+      min-width: 700px;
+      height:65px;
+    }
+    .header-info{
+      font-size:15px;
+      position: absolute;
+      top:13px;
+      left:220px;
+    }
+    .header-right{
+      position: absolute;
+      top:0;
+      right:10px;
+    }
+    .big-main{
+      border: 5px solid rgb(80, 151, 238);
+      border-radius: 10px;
+      width: calc(100% - 15px);
+      height: calc(100% - 85px);
+      position: relative;
+      min-width: 700px;
+      margin:5px;
+    }
+    aside{
+      border: 5px solid rgb(80, 151, 238);
+      border-radius: 10px;
+      position: absolute;
+      top:0;
+      left:0;
+      width: 200px;
+      margin: -5px;
+      height:100%;
+      /* height: calc(100% - 10px); */
+    }
+    aside ul{
+      list-style-type:none;
+      padding:20px;
+    }
+    aside .aside-top{
+      border: 5px solid rgb(80, 151, 238);
+      border-radius: 10px;
+      margin: -5px;
+    }
+    aside .aside-bottom{
+      border-top: 5px solid rgb(80, 151, 238);
+      border-radius: 10px;
+      margin:-5px;
+    }
+    main{
+      border: 5px solid rgb(80, 151, 238);
+      border-radius: 10px;
+      position: absolute;
+      top:0;
+      left:205px;
+      width: calc(100% - 205px );
+      height: 100%;
+      margin:-5px;
+      overflow:auto;
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <img src="https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/logo/logo_0_01f1927.png" alt="">
+    <div class="header-info">
+      <b>username</b>&lt;<span>email</span>&gt;<br>
+      <a href="">邮箱首页</a>&nbsp;|&nbsp;
+      <a href="">设置</a>&nbsp;-&nbsp;
+      <a href="">换肤</a>
+    </div>
+    <div class="header-right">
+      <div class="right">
+        <a href=""><img src="https://www.easyicon.net/api/resizeApi.php?id=1228620&size=16" alt="" width="8px" ></a>
+        &nbsp;|&nbsp;
+        <a href="">反馈建议</a>
+        &nbsp;|&nbsp;
+        <a href="">帮助中心</a>
+        &nbsp;|&nbsp;
+        <a href="">退出</a>
+        &nbsp;
+      </div>
+      <br>
+      <form action="" class="search-box">
+        <input type="text" placeholder="邮件全文搜索...">
+        <button type="submit">搜索</button>
+      </form>
+    </div>
+  </header>
+
+  <div class="big-main">
+    <aside>
+      <ul class="aside-top">
+        <li><a href="">写信</a></li>
+        <li><a href="">收信</a></li>
+        <li><a href="">通讯录</a></li>
+      </ul>
+      <ul class="aside-bottom">
+        <li><a href="">收件箱(number)</a></li>
+        <li><a href="">星标邮件</a></li>
+        <li><a href="">群邮件</a></li>
+        <li><a href="">草稿箱</a></li>
+        <li><a href="">已发送</a></li>
+        <li><a href="">已删除</a><a href="">[清空]</a></li>
+        <li><a href="">垃圾箱</a><a href="">[清空]</a></li>
+        <li><a href="">QQ邮件订阅</a></li>
+  
+        <li><a href="">其他邮箱</a></li>
+  
+        <li><a href="">漂流瓶</a></li>
+        <li><a href="">日历</a>&nbsp;|&nbsp;<a href="">记事本</a></li>
+        <li><a href="">在线文档</a></li>
+        <li><a href="">附件收藏</a></li>
+        <li><a href="">文件中转站</a></li>
+        <li><a href="">贺卡</a>&nbsp;|&nbsp;<a href="">明信片</a></li>
+        <li><a href="">阅读空间</a></li>
+      </ul>
+    </aside>
+    <main>
+      <p>下午好，<a href="">username</a></p>
+      <p>邮件：number1封未读邮件，number2封星标邮件</p>
+      <br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>
+      haha
+      <br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>
+      haha
+      <br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>
+      haha
+      <br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>
+      haha
+    </main>
+  </div>
+
+</body>
+</html>

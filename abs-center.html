@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .inline-block{
+      /* display: inline-block; */
+      border: 1px solid;
+      width: 300px;
+      height: 200px;
+      text-align: center;
+      line-height: 290px;
+    }
+    .inline-block .i{
+      display: inline-block;
+      background-color: aquamarine;
+      border: 1px solid;
+      width: 100px;
+      height: 100px;
+      /* vertical-align: middle; */
+    }
+    .position{
+      border: 1px solid;
+      width: 200px;
+      height: 200px;
+      position:absolute;
+      top:300px;
+      left:10px;
+      /* margin:auto; */
+    }
+    .position .p{
+      border: 1px solid;
+      width: 100px;
+      height: 100px;
+      background-color: aquamarine;
+      position:absolute;
+      top:49px;
+      left:49px;
+    }
+  </style>
+
+</head>
+<body>
+  inline-block
+  <div class="inline-block">
+    <div class="i"></div>
+  </div>
+  <br>
+  position
+  <div class="position">
+    <div class="p"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .icon{
+      background-image:url(https://ssl.gstatic.com/gb/images/i2_2ec824b0.png);
+      /* div可以不加display,因为它是块级元素，而自定义的i标签必须把display设为块级元素才能正常显示 */
+      display:inline-block;
+      /* display:block; */
+    }
+    .icon-colorful-google{
+      border:1px solid transparent;
+      width:195px;
+      height:80px;
+      background-position:5px -60px;
+    }
+    .icon-black-google{
+      border:1px solid transparent;
+      width:195px;
+      height:75px;
+      background-position:-187px 5px;
+    }
+    .icon-black-add{
+      border:1px solid transparent;
+      width:60px;
+      height:60px;
+      background-position: bottom -5px right -140px;
+    }
+
+    
+  </style>
+
+</head>
+<body>
+  <div class="icon icon-colorful-google"></div>
+  <i class="icon icon-black-google"></i>
+  <i class="icon icon-black-add"></i>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bootstrap-input-group</title>
+  <style>
+    .input-group{
+      display: table;
+      width:100%;
+      /* 视频中有对不齐的情况，用这属性解决的，但这并没有遇到 */
+      /* border-collapse:separate; */
+    }
+    .input-group>*{
+      display: table-cell;
+      border:2px solid;
+    }
+    .input-group span{
+      /* 优先最窄，并不完全写死，会自动调整 */
+      width: 1%;
+      /* 防止折行 */
+      white-space: nowrap;
+    }
+    .input-group input{
+      /* 优先最宽，并不完全写死，会自动调整 */
+      width: 100%;
+      height: 35px;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="input-group">
+    <span>https://example.com/users/ 1</span>
+    <input type="text">
+  </div>
+</body>
+</html>

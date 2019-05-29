@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    table{
+      border-collapse: collapse;
+      overflow: hidden;
+    }
+    td{
+      border: 2px solid;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      position: relative;
+    }
+    tr:hover{
+      background-color: yellow;
+    }
+    td:hover::before{
+      content:'';
+      display:block;
+      width: 100%;
+      height: 99999%;
+      background-color: yellow;
+
+      z-index: -1;
+      position:absolute;
+      top:-99999px;
+    }
+  </style>
+
+</head>
+<body>
+  <table>
+    <col>
+    <col>
+    <col>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

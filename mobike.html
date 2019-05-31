@@ -15,7 +15,6 @@
     body *{
       font-size: 16px;
     }
-    
     .slideshow{
       height: 762px;
     }
@@ -53,9 +52,12 @@
       /* max-width或width百分比，配合margin能让元素居中，并且两端留白！！ */
       max-width: 1080px;
       /* width:80%; */
-      padding:0 20px; 
       margin: auto;
+
+      padding:0 20px; 
       border-bottom:1px solid rgb(238, 238, 238);
+      display: block;
+      min-height: 140px;
     }
     .meta-links .meta-link{
       float: left;
@@ -102,6 +104,59 @@
       font-weight: lighter;
     }
 
+    footer{
+      /* 大框居中 */
+      max-width: 1080px;
+      /* width: 80%; */
+      margin: auto;
+      
+      display: flex;
+      height:auto;
+      flex-wrap: wrap;
+      padding:45px 20px;
+      justify-content: space-between;
+    }
+    footer ul.footer-main-links{
+      padding: 0;
+      width: 360px;
+      /* min-width: 35px; */
+    }
+    footer ul.footer-main-links li{
+      list-style-type: none;
+      /* width: 200px; */
+      height: 37px;
+      line-height: 37px;
+      font-weight: lighter;
+    }
+    footer ul.footer-main-links li.font-logo{
+      background-size: 40%;
+      background-repeat: no-repeat;
+      margin-bottom: 10px;
+    }
+
+    footer .footer-list-wrap h4{
+      font-size: 18px;
+      margin:0;
+    }
+    footer .footer-list-wrap .footer-list>ul>li{
+      font-size: 15px;
+      font-weight: lighter;
+    }
+    footer .footer-list-wrap{
+      display:flex;
+      flex-wrap: wrap;
+    }
+    footer .footer-list-wrap .footer-list:not(:nth-child(1)){
+      margin-left:8vw;
+    }
+    footer .footer-list-wrap .footer-list ul{
+      list-style-type: none;
+      padding: 0;
+      width: auto;
+    }
+    footer .footer-list-wrap .footer-list li{
+      padding:5px 5px 5px 0;
+    }
 
     @media (max-width: 1080px){
       .slideshow{
@@ -123,6 +178,9 @@
         padding: 20px 0;
         text-align: left !important;
       }
+      .meta-links{
+        min-height: 180px;
+      }
     }
 
     @media (max-width: 640px){
@@ -135,6 +193,12 @@
         border-left:0;
         border-right:0;
       } 
+      footer .footer-list-wrap .footer-list{
+        width: 30%;
+      }
+      footer .footer-list-wrap .footer-list:nth-child(3){
+        margin-left: 0;
+      }
     }
   </style>
 </head>
@@ -183,16 +247,44 @@
 
   <footer>
     <ul class="footer-main-links">
-      <li style="background-image: url('https://mobike.com/cn/assets/themes/moby/img/logo-text.svg')"></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li class="font-logo" style="background-image: url('https://mobike.com/cn/assets/themes/moby/img/logo-text.svg')"></li>
+      <li>Beijing Mobike Technology Co., Ltd</li>
+      <li>客服电话 400-811-7799</li>
+      <li>北京摩拜科技有限公司</li>
     </ul>
-    <div class="foot-list-wrap">
-      <div class="footer-list"></div>
-      <div class="footer-list"></div>
-      <div class="footer-list"></div>
-      <div class="footer-list"></div>
+    <div class="footer-list-wrap">
+      <div class="footer-list">
+        <h4>产品</h4>
+        <ul>
+          <li>经典版</li>
+          <li>轻骑</li>
+          <li>智能锁</li>
+        </ul>
+      </div>
+      <div class="footer-list">
+        <h4>生活</h4>
+        <ul>
+          <li>城市</li>
+        </ul>
+      </div>
+      <div class="footer-list">
+        <h4>关于</h4>
+        <ul>
+          <li>关于Mobike</li>
+          <li>加入我们</li>
+          <li>联系我们</li>
+          <li>服务协议</li>
+        </ul>
+      </div>
+      <div class="footer-list">
+        <h4>社交网络</h4>
+        <ul>
+          <li>微博</li>
+          <li>微信</li>
+          <li>知乎专栏</li>
+          <li>Facebook</li>
+        </ul>
+      </div>
     </div>
 
   </footer>

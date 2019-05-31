@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>QQ-Mail-Flex</title>
+  <style>
+    html{
+      height: 100%;
+    }
+    body{
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+    }
+    header{
+      display:flex;
+      flex-basis: 100%;
+      background-color: lime;
+      height:150px;
+    }
+    aside{
+      display: flex;
+      background-color: cornflowerblue;
+      flex-basis:20%;
+      height:calc(100% - 150px);
+    }
+    main{
+      display: flex;
+      background-color: deepskyblue;
+      flex-basis:80%
+    }
+
+  </style>
+
+</head>
+<body>
+  <header></header>
+  <aside>
+    <div></div>
+  </aside>
+  <main></main>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .clock-container{
+      width: 300px;
+      height: 300px;
+      background-color: #cdcdcd;
+      position: relative;
+      border-radius: 10px;
+    }
+    .clock{
+      width: 250px;
+      height: 250px;
+      background-color: #ffffff;
+      border-radius: 200px;
+      position: absolute;
+      left:25px;
+      top:25px;
+    }
+    .clock .numbers span{
+      font-size: 30px;
+      font-family: sans-serif;
+    }
+    .clock .numbers span:nth-child(1){
+      position: absolute;
+      right:65px;
+      top:15px;
+    }
+    .clock .numbers span:nth-child(2){
+      position: absolute;
+      right:30px;
+      top:50px;
+    }
+    .clock .numbers span:nth-child(3){
+      position: absolute;
+      right:15px;
+      top:100px;
+    }
+    .clock .numbers span:nth-child(4){
+      position: absolute;
+      right:30px;
+      top:155px;
+    }
+    .clock .numbers span:nth-child(5){
+      position: absolute;
+      right:65px;
+      top:195px;
+    }
+    .clock .numbers span:nth-child(6){
+      position: absolute;
+      right:115px;
+      top:215px;
+    }
+    .clock .numbers span:nth-child(7){
+      position: absolute;
+      left:60px;
+      top:195px;
+    }
+    .clock .numbers span:nth-child(8){
+      position: absolute;
+      left:25px;
+      top:155px;
+    }
+    .clock .numbers span:nth-child(9){
+      position: absolute;
+      left:10px;
+      top:100px;
+    }
+    .clock .numbers span:nth-child(10){
+      position: absolute;
+      left:20px;
+      top:50px;
+    }
+    .clock .numbers span:nth-child(11){
+      position: absolute;
+      left:55px;
+      top:15px;
+    }
+    .clock .numbers span:nth-child(12){
+      position: absolute;
+      left:105px;
+      top:0px;
+    }
+    .hours-container{
+      position: absolute;
+      width: 250px;
+      height: 250px;
+    }
+    .hours{
+      width: 7px;
+      height: 50px;
+      background-color: black;
+      position: absolute;
+      left:122px;
+      top:70px;
+      transform-origin: 3.5px 50px;
+      animation: circle 216000s infinite linear;
+    }
+    .minutes{
+      width: 5px;
+      height: 100px;
+      background-color: black;
+      position: absolute;
+      left:123px;
+      top:20px;
+      transform-origin: 2.5px 100px;
+      animation: circle 3600s infinite linear;
+    }
+    .seconds{
+      width: 3px;
+      height: 100px;
+      background-color: black;
+      position: absolute;
+      left:124px;
+      top:30px;
+      transform-origin: 1.5px 90px;
+      animation: circle 60s infinite steps(60) ;
+    
+    
+    }
+    @keyframes circle{
+      0%{
+      transform: rotate(0deg);
+      }
+      100%{
+      transform: rotate(360deg);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="clock-container">
+    <div class="clock">
+      <div class="numbers">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+      </div>
+      <div class="hours-container">
+        <div class="hours"></div>
+      </div>
+      <div class="minutes"></div>
+      <div class="seconds"></div>
+    </div>
+  </div>
+  
+</body>
+</html>

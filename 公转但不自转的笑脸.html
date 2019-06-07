@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>不会</title>
+  <style>
+    div.circle{
+      width: 500px;
+      height: 500px;
+      border: 1px solid;
+      float:left;
+      position: relative;
+      left:200px;
+      top:150px;
+      border-radius: 500px;
+    }
+    div.box{
+      width: 200px;
+      height: 200px;
+      /* border:1px solid; */
+      position: relative;
+      top:100px;
+      left:400px;
+      /* 外面设置基点，公转 */
+      transform-origin: 50px 300px; 
+      animation: circle-box 3s infinite linear;
+    }
+    div.inner{
+      width: 100px;
+      height: 100px;
+      /* border:1px solid; */
+      background-size: cover;
+      position: absolute;
+      top:25%;
+      left:25%;
+      /* 里面不设置基点，自转 */
+      /* transform-origin: 50px 300px;  */
+      animation: circle-inner 3s infinite linear;
+    }
+    /* 两个旋转方向相反 */
+    @keyframes circle-box{
+      to{
+        transform: rotate(1turn);
+      }
+    }
+    @keyframes circle-inner{
+      from{
+        transform: rotate(1turn);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle"></div>
+  <div class="box">
+    <div class="inner" style="background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559737570808&di=5a89fe9e316cae07690718cb281c2688&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201610%2F05%2F20161005105402_xiLsK.thumb.700_0.jpeg')"></div>
+  </div>
+</body>
+</html>

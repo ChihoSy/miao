@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,body{
+      margin: 0;
+      width: 100%;
+    }
+    .box{
+      display:flex;
+      background-color: cornflowerblue;
+      flex-wrap: wrap;
+    }
+    .square{
+      margin:5px;
+      width: 100px;
+      /* height: 100px; */
+      background-color: red;
+      flex-grow:1;
+    }
+    
+    /* 当margin/padding取形式为百分比的值时，
+    无论是left/right，还是top/bottom，都是以父元素的width为参照物的！
+    此处的padding-top:100%以square的width为参照，square高度是由padding撑起来的，
+    即padding-top==square.width */
+    .square::before{
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+    /* 最后几个占个位，不至于拉伸 */
+    .square:nth-last-child(-n + 5) {
+      height: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+</body>
+</html>

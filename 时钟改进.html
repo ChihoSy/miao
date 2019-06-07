@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .clock-container{
+      width: 300px;
+      height: 300px;
+      background-color: #cdcdcd;
+      position: relative;
+      border-radius: 10px;
+    }
+    .clock{
+      width: 250px;
+      height: 250px;
+      background-color: #ffffff;
+      border-radius: 200px;
+      position: absolute;
+      left:25px;
+      top:25px;
+    }
+    .clock .numbers span{
+      font-size: 30px;
+      font-family: sans-serif;
+      /* 这样写能居中！！！！！！ */
+      position: absolute;
+      /* background-color: cyan; */
+      /* 让盒子里面的元素居中 */
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      /* 让盒子居中 */
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      margin:auto;
+
+    }
+    .clock .numbers span:nth-child(1){
+      transform: rotate(-60deg) translate(100px) rotate(60deg); 
+    }
+    .clock .numbers span:nth-child(2){
+      transform: rotate(-30deg) translate(100px) rotate(30deg);
+    }
+    .clock .numbers span:nth-child(3){
+      transform: rotate(-0deg) translate(100px) rotate(0deg);
+    }
+    .clock .numbers span:nth-child(4){
+      transform: rotate(30deg) translate(100px) rotate(-30deg);
+
+    }
+    .clock .numbers span:nth-child(5){
+      transform: rotate(60deg) translate(100px) rotate(-60deg);
+
+    }
+    .clock .numbers span:nth-child(6){
+      transform: rotate(90deg) translate(100px) rotate(-90deg);
+    }
+    .clock .numbers span:nth-child(7){
+      transform: rotate(120deg) translate(100px) rotate(-120deg);
+      
+    }
+    .clock .numbers span:nth-child(8){
+      transform: rotate(150deg) translate(100px) rotate(-150deg);
+
+    }
+    .clock .numbers span:nth-child(9){
+      transform: rotate(180deg) translate(100px) rotate(-180deg);
+
+    }
+    .clock .numbers span:nth-child(10){
+      transform: rotate(210deg) translate(100px) rotate(-210deg);
+
+    }
+    .clock .numbers span:nth-child(11){
+      transform: rotate(240deg) translate(100px) rotate(-240deg);
+
+    }
+    .clock .numbers span:nth-child(12){
+      transform: rotate(270deg) translate(100px) rotate(-270deg);
+
+    }
+    .hours-container{
+      position: absolute;
+      width: 250px;
+      height: 250px;
+    }
+    .hours{
+      width: 7px;
+      height: 50px;
+      background-color: black;
+      position: absolute;
+      left:122px;
+      top:75px;
+      transform-origin: 3.5px 50px;
+      animation: circle 216000s infinite linear;
+    }
+    .minutes{
+      width: 5px;
+      height: 100px;
+      background-color: black;
+      position: absolute;
+      left:123px;
+      top:25px;
+      transform-origin: 2.5px 100px;
+      animation: circle 3600s infinite linear;
+    }
+    .seconds{
+      width: 3px;
+      height: 100px;
+      background-color: black;
+      position: absolute;
+      left:124px;
+      top:35px;
+      transform-origin: 1.5px 90px;
+      animation: circle 60s infinite steps(60) ;
+    }
+    @keyframes circle{
+      0%{
+      transform: rotate(0deg);
+      }
+      100%{
+      transform: rotate(360deg);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="clock-container">
+    <div class="clock">
+      <div class="numbers">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+      </div>
+      <div class="hours-container">
+        <div class="hours"></div>
+      </div>
+      <div class="minutes"></div>
+      <div class="seconds"></div>
+    </div>
+  </div>
+  
+</body>
+</html>

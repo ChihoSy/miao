@@ -1,0 +1,279 @@
+html{
+  widows: 100%;
+}
+body{
+  margin: 0;
+  font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+  min-width: 1226px;
+  width: 100%;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+.container{
+  width: 1226px;
+  margin: 0 auto;
+}
+ul{
+  list-style-type: none;
+}
+
+.site-topbar{
+  font-size: 12px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #333333;
+  /* white-space: nowrap; */
+  position: relative;
+}
+.site-topbar a{
+  color: #b0b0b0;
+}
+.site-topbar .topbar-nav a:hover,
+.site-topbar .topbar-info a:hover{
+  color: #ffffff;
+}
+.site-topbar .topbar-nav a,
+.site-topbar .topbar-info a{
+  /* 可以把指针响应的范围上下增大 */
+  display: inline-block;
+}
+.site-topbar .topbar-nav{
+  float:left;
+}
+.sep{
+  color: #424242;
+  margin:0 3px;
+}
+.site-topbar .topbar-cart{
+  float:right;
+  width: 120px;
+  background-color: #424242;
+  text-align: center;
+  margin-left: 15px;
+  position: relative;
+}
+.site-topbar .topbar-cart .icon-cart{
+  font-size: 12px;
+}
+.site-topbar .topbar-cart .cart-menu{
+  position: absolute;
+  right: 0;
+  top:40px;
+  color: #424242;
+  margin: 0 auto;
+  width: 316px;
+  height: 0px;
+  font-size: 0;
+  line-height: 100px;
+  box-shadow:0px 2px 10px rgba(0,0,0,0.15);
+  z-index: 10;
+  background-color: white;
+}
+.site-topbar .topbar-cart:hover{
+  background-color: #ffffff;
+  color: red;
+}
+.site-topbar .topbar-cart:hover a{
+  color: #ff6700;
+}
+.site-topbar .topbar-cart:hover > .cart-menu{
+  display: block;
+  height: 100px;
+  font-size: 12px;
+  transition: height 0.3s;
+  z-index: 10;
+}
+
+.site-topbar .topbar-info{
+  float:right;
+}
+
+
+
+.site-header{
+  height:100px;
+  position: relative;
+  padding: 22px 0;
+  box-sizing: border-box;
+}
+.site-header .header-logo{
+  background-image: url('https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=292d6b0ca1345982d187edc06d9d5ac8/f2deb48f8c5494ee4eeff06121f5e0fe98257efd.jpg');
+  width: 55px;
+  height: 55px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  float:left;
+}
+/* .site-header .head-nav{
+  display: flex;
+} */
+.site-header .head-nav ul.nav-list{
+  /* display: flex; */
+  float:left;
+  list-style-type: none;
+  margin: 0;
+  height: 55px;
+  line-height: 55px;
+  padding:0;
+  margin-left: 180px;
+  /* width: 650px; */
+  width: 511px;
+  /* flex-wrap: nowrap; */
+}
+.site-header .head-nav ul.nav-list-two{
+  float:left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 55px;
+  line-height: 55px;
+  width: 140px;
+}
+.site-header .head-nav ul.nav-list-two li{
+  float:left;
+  height:78px;
+}
+.site-header .head-nav li.nav-item{
+  /* 注:inline-block和float都要 在li中设置，否则不能在同一行 */
+  float:left;
+  height:78px;
+}
+.site-header .head-nav li.nav-item > a{
+  font-size: 16px;
+  color: #333333;
+  padding:10px;
+}
+.site-header .head-nav li.nav-item > a span{
+  /* 能把鼠标选中后的背景高度降低至与字体高度一致 */
+  display: inline-block;
+}
+.site-header .head-nav li.nav-item:hover > a{
+  color: #ff6700;
+}
+
+
+/* hover下拉框 */
+.site-header .head-nav ul.nav-list:hover li.nav-item div.item-children{
+  border-top: 1px solid #e0e0e0;
+  height: 230px;
+  transition: height 0.3s 0.2s;
+  box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.15);
+}
+.site-header .head-nav ul.nav-list li.nav-item:hover > div.item-children{
+  z-index: 10;
+}
+
+
+
+div.item-children{
+  position: absolute;
+  top:100px;
+  left:0;
+  width: 100%;
+  /* height: 230px; */
+  height:0;
+  overflow: hidden;
+  background-color: white;
+}
+div.item-children div.item-children-img{
+  width: 203px;
+  height: 110px;
+  border-right:1.5px solid #e0e0e0;
+
+  background-size: 80%;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  top:30px;
+}
+div.item-children ul li:nth-child(6) div.item-children-img{
+  border-right: none;
+}
+
+div.item-children ul{
+  padding: 0;
+  height:230px;
+  overflow: hidden;
+}
+div.item-children ul li{
+  float:left;
+  width: 203px;
+  height: 230px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+div.item-children li a.title{
+  position: absolute;
+  top:140px;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+div.item-children span.price{
+  margin: 0;
+  position: absolute;
+  top:160px;
+  font-size: 12px;
+  color: #ff6700;
+  width: 100%;
+  text-align: center;
+}
+span.flag{
+  font-size: 12px;
+  display:inline-block;
+  border:1px solid;
+  width: 60px;
+  height: 18px;
+  line-height:18px;
+  position: absolute;
+  /* 这个框不知道怎么跟上面重,因为已经overflow:hidden了 */
+  /* top:-1px; */
+  left:50%;
+  transform: translate(-50%);
+  text-align: center;
+  color:#ff6700;
+}
+
+
+
+.search-box{
+  float:right;
+  height:60px;
+}
+.site-header input.search-text{
+  float:right;
+  width: 220px;
+  height: 48px;
+  position: relative;
+  top:2px;
+  border:1px solid #e0e0e0;
+  padding: 0 10px;
+  z-index: 1;
+}
+.site-header input.search-button{
+  float:right;
+  width: 50px;
+  height: 46px;
+  position: relative;
+  top:2px;
+  border:1px solid #e0e0e0;
+  border-left:0;
+  z-index: 1;
+  text-align: center;
+}
+
+.search-box:hover > input.search-button,
+.search-box:hover > input.search-text {
+  border-color:#b0b0b0;
+}
+.site-header input.search-button:hover {
+  background-color: #ff6700;
+}
+

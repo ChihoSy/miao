@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .cube{
+      width: 500px;
+      height: 500px;
+      /* background-color: cornflowerblue; */
+      position: relative;
+      transform-style: preserve-3d;
+      transform: perspective(500px);
+    }
+    .cube div{
+      width: 200px;
+      height: 200px;
+      font-size: 50px;
+      text-align: center;
+      line-height: 200px;
+    }
+    .cube:hover{
+      transition: 5s;
+      transform:rotateY(120deg) rotateX(60deg)  rotateZ(90deg);
+    }
+    .c1{
+      background-color: cyan;
+      position: absolute;
+      left:100px;
+      top:100px;
+    }
+    .c2{
+      background-color: red;
+      position: absolute;
+      left:0px;
+      top:100px;
+      transform: rotateY(90deg);
+   }
+   .c3{
+      background-color: chartreuse;
+      position: absolute;
+      left:200px;
+      top:100px;
+      transform: rotateY(-90deg);
+   }
+   .c4{
+      background-color: salmon;
+      position: absolute;
+      left:100px;
+      top:200px;
+      transform: rotateX(90deg);
+   }
+   .c5{
+      background-color: palevioletred;
+      position: absolute;
+      left:100px;
+      top:0px;
+      transform: rotateX(-90deg);
+   }
+   .c6{
+      background-color: plum;
+      position: absolute;
+      left:100px;
+      top:100px;
+   }
+  </style>
+</head>
+<body>
+  <div class="cube">
+    <div class="c1">1</div>
+    <div class="c2">2</div>
+    <div class="c3">3</div>
+    <div class="c4">4</div>
+    <div class="c5">5</div>
+    <div class="c6">6</div>
+  </div>
+</body>
+</html>

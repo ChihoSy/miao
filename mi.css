@@ -167,7 +167,6 @@ ul{
 }
 
 
-
 div.item-children{
   position: absolute;
   top:100px;
@@ -177,7 +176,13 @@ div.item-children{
   height:0;
   overflow: hidden;
   background-color: white;
+  /* 鼠标离开时z-index延迟1s才变化，防止下拉框先变回最后一个ul才回退。 */
+  z-index: 5;
+  /* 必须写solid和颜色才有效果(下拉框回退时border-top一直保持) */
+  border-top: 0px solid #e0e0e0;
+  transition: height 0.3s 0.2s,z-index 1s 1s,border-top 0s 0.5s;
 }
+
 div.item-children div.item-children-img{
   width: 203px;
   height: 110px;

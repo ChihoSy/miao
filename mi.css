@@ -113,6 +113,7 @@ ul{
 .site-header .head-nav ul.nav-list{
   /* display: flex; */
   float:left;
+  /* display: inline-block; */
   list-style-type: none;
   margin: 0;
   height: 55px;
@@ -125,6 +126,7 @@ ul{
 }
 .site-header .head-nav ul.nav-list-two{
   float:left;
+  /* display: inline-block; */
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -160,7 +162,7 @@ ul{
   border-top: 1px solid #e0e0e0;
   height: 230px;
   transition: height 0.3s 0.2s;
-  box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.15);
+  box-shadow: 0px 3px 6px -5px rgba(0,0,0,0.15);
 }
 .site-header .head-nav ul.nav-list li.nav-item:hover > div.item-children{
   z-index: 10;
@@ -180,7 +182,8 @@ div.item-children{
   z-index: 5;
   /* 必须写solid和颜色才有效果(下拉框回退时border-top一直保持) */
   border-top: 0px solid #e0e0e0;
-  transition: height 0.3s 0.2s,z-index 1s 1s,border-top 0s 0.5s;
+  transition: height 0.3s 0.2s,z-index 1s 1s,
+              border-top 0s 0.5s,box-shadow 0s 0.5s;
 }
 
 div.item-children div.item-children-img{
@@ -282,3 +285,132 @@ span.flag{
   background-color: #ff6700;
 }
 
+
+.home-hero-container{
+  background-color: ghostwhite;
+  height:832px;
+  position: relative;
+  top: 18px;
+  clear: both;
+}
+.home-hero-container .home-hero{
+  height: 460px;
+  background-color: gray;
+}
+.home-hero-container .home-hero .home-hero-categoryList{
+  width: 234px;
+  height: 460px;
+  background-color: rgba(0,0,0,0.15);
+  /* opacity: 0.5; */
+
+  /* 在上面的div全是浮动的情况下，导致margin合并，
+  并且.home-hero-container设置了top,这时不加这个position，ul位置就乱了,
+
+  原因是.home-hero-container先不加position: relative时，.home-hero-container上边框
+  与浮动元素重合，ul被挤压变形，加position: relative后，.home-hero-container带着变形后
+  的ul进行移动。
+
+  解决办法:在浮动元素的下面div中清除浮动，加clear:both,不加这个position都是正常的 */
+
+  /* 这个position: absolute;是为了给后面.category-children定位 */
+  position: absolute;
+}
+
+.home-hero-container .home-hero-categoryList ul.categoryList{
+  padding:20px 0;
+  margin: 0;
+  /* border:1px solid; */
+
+}
+.home-hero-container .home-hero-categoryList li.category-item{
+  /* border:1px solid; */
+  padding-left: 30px;
+  /* cursor: pointer; */
+}
+.home-hero-container .home-hero-categoryList li.category-item:hover{
+  background-color: #ff6700;
+}
+.home-hero-container .home-hero-categoryList li.category-item a{
+  display: block;
+  height:42px;
+  line-height: 42px;
+  color: #f7f7f7;
+}
+.home-hero-container .home-hero-categoryList li.category-item a::after{
+  content:'>';
+  float:right;
+  margin-right:20px;
+}
+
+
+.home-hero-container .home-hero-categoryList li.category-item:hover > div.category-children{
+  display: block;
+}
+
+.home-hero-container .category-children{
+  height:458px;
+  position: absolute;
+  top:0;
+  left:234px;
+  background-color: #fff;
+  /* float:left; */
+  display:none;
+  border:1px solid #e0e0e0;
+  border-left:0;
+  box-shadow: 2px 10px 3px 3px rgba(0,0,0,0.05);
+
+  /* 使用Flex布局，把主轴方向设置为垂直方向。虽然这样商品竖着排列了，
+  但是随着商品列数的增加，外层的容器并不会自动变宽,而以下属性可以解决这个问题,
+  不加 flex-direction: column */
+  /* 垂直方向自左而右的书写方式 */
+  /* writing-mode: vertical-lr;  */
+  /* 让文字直立显示，IE不支持，FireFox, Chrome支持 */
+  /* text-orientation:upright; */
+  /* 但后面图片后的文字还是垂直，不知道怎么改，暂时不用 */
+}
+.col-sum-1{
+  width: 248px;
+}
+.col-sum-2{
+  width: 496px;
+}
+.col-sum-3{
+  width: 744px;
+}
+.col-sum-4{
+  width: 992px;
+}
+.home-hero-container .category-children ul.col{
+  padding:0;
+  height:458px;
+  float:left;
+  width: 248px;
+
+  /* cursor: pointer; */
+
+
+  /* display:flex;
+  flex-wrap: wrap; */
+  
+}
+.home-hero-container .category-children ul.col li{
+  width: 229px;
+  height: calc(458px / 6);
+  padding-left: 19px;
+}
+.home-hero-container .category-children ul.col li a{
+  height:100%;
+  line-height: calc(458px / 6);
+  
+}
+.home-hero-container .category-children ul.col li a img{
+  float:left;
+  width: 40px;
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+}
+.home-hero-container .category-children ul.col li a span{
+  padding-left: 13px;
+  color: #333333;
+}

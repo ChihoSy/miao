@@ -62,9 +62,10 @@
 
 <script id="ch0103/09">
   var r=Number(prompt("输入r"));
+  const pi=3.14159;
   var d=(2*r).toFixed(4);
-  var l=(Math.PI*2*r).toFixed(4);
-  var s=(Math.PI*Math.pow(r,2)).toFixed(4);
+  var l=(pi*2*r).toFixed(4);
+  var s=(pi*Math.pow(r,2)).toFixed(4);
   console.log(d,l,s);
 </script>
 
@@ -95,7 +96,9 @@
   var a=Math.floor(n/100);
   var b=Math.floor(n/10)%10;
   var c=n%10;
-  console.log(a+b*10+c*100);
+  // var result=String(c)+String(b)+String(a);
+  var result=c*100+""+b*10+""+a;
+  console.log(result);
 </script>
 
 <script id="ch0103/14">
@@ -155,10 +158,363 @@
   console.log(Math.pow(2,n));
 </script>
 
+<script id="ch0104/01">
+  var N=Number(prompt("输入N"));
+  if(-(10**9) <= N && N <= 10**9){
+    if(N>0)
+      console.log("positive");
+    if(N==0)
+      console.log("zero");
+    if(N<0)
+      console.log("negative");
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
 
+<script id="ch0104/02">
+  var a=Number(prompt("输入a"));
+  if(Math.abs(a)<=10000){
+    console.log(Math.abs(a).toFixed(2));
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
 
+<script id="ch0104/03">
+  var n=Number(prompt("输入n"));
+  if(n>0){
+    if(n%2===1){
+      console.log("odd");
+    }
+    if(n%2===0){
+      console.log("even");
+    }
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
 
+<script id="ch0104/04">
+  var s=String(prompt("输入s"));
+  if(s.charCodeAt()%2==1){
+    console.log("YES");
+  }
+  if(s.charCodeAt()%2==0){
+    console.log("NO");
+  }
+</script>
 
+<script id="ch0104/05">
+  var x=Number(prompt("输入x"));
+  var y=Number(prompt("输入y"));
+  if(0 <= x && x < 2^32 && -2^31 <= y && y < 2^31){
+    if(x>y){
+      console.log(">");
+    }
+    else if(x==y){
+      console.log("=");
+    }
+    else{
+      console.log("<");
+    }
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/06">
+  var a=Number(prompt("输入a"));
+  if(a>0 &&　a<=1000 && a%1===0){
+    if(a>=10 && a<=99){
+      console.log(1);
+    }
+    else{
+      console.log(0);
+    }
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/07">
+  var a=Number(prompt("输入a"));
+  var b=Number(prompt("输入b"));
+  if(a>=10 || b>=20){
+    console.log(1);
+  }
+  else{
+    console.log(0);
+  }
+</script>
+
+<script id="ch0104/08">
+  var n=Number(prompt("输入n"));
+  if(-1000000 < n && n < 1000000 && Math.floor(n)===n){
+    if(n%3===0 && n%5===0){
+      console.log("YES");
+    }
+    else{
+      console.log("NO");
+    }
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/09">
+  var n=Number(prompt("输入n"));
+  if(Math.floor(n)===n){
+    if(n%3===0 && n%5===0 && n%7===0){
+      console.log(3,5,7);
+    }
+    else if(n%3!==0 && n%5===0 && n%7===0){
+      console.log(5,7);
+    }
+    else if(n%3===0 && n%5!==0 && n%7===0){
+      console.log(3,7);
+    }
+    else if(n%3===0 && n%5===0 && n%7!==0){
+      console.log(3,5);
+    }
+    else if(n%3===0 && n%5!==0 && n%7!==0){
+      console.log(3);
+    }
+    else if(n%3!==0 && n%5===0 && n%7!==0){
+      console.log(5);
+    }
+    else if(n%3!==0 && n%5!==0 && n%7===0){
+      console.log(7);
+    }
+    else if(n%3!==0 && n%5!==0 && n%7!==0){
+      console.log("n");
+    }
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/10">
+  var a=Number(prompt("输入a"));
+  var b=Number(prompt("输入b"));
+  if(a >= 0 && a <= 100 && a%1===0 && b >= 0 && b <= 100 && b%1===0){
+    if(a < 60 || b < 60){
+      console.log(1);
+    }
+    else{
+      console.log(0);
+    }
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/11">
+  var a=Number(prompt("输入a"));
+  if(a>=1 && a<=7 && Math.floor(a)===a){
+    if(a==1 || a==3 || a==5){
+      console.log("NO");
+    }
+    else{
+      console.log("YES");
+    }
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/12">
+  var a=Number(prompt("输入a"));
+  if(a>=0 && Math.floor(a)===a){
+    if(a/1.2 > (a/3.0+27+23)){
+      console.log("Bike");
+    }
+    else if(a/1.2 < (a/3.0+27+23)){
+      console.log("Walk");
+    }
+    else{
+      console.log("All");
+    }
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/13">
+  var N=Number(prompt("输入N"));
+  if(0<=N && N<20){
+    if(0<=N && N<5){
+      console.log((-N+2.5).toFixed(3));
+    }
+    else if(5<=N && N<10){
+      console.log((2-1.5*(N-3)*(N-3)).toFixed(3));
+    }
+    else if(10<=N && N<20){
+      console.log((N/2-1.5).toFixed(3));
+    }
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/14">
+  var a=Number(prompt("输入a"));
+  var s=String(prompt("输入s"));
+  if(a%1===0){
+    if(a<=1000){
+      if(s==="n")
+        console.log(8);
+      if(s==="y")
+       console.log(13);
+    }
+    else if(a>1000){
+      if(s==="n")
+        console.log(8+Math.ceil((a-1000)/500)*4);
+      if(s==="y")
+        console.log(13+Math.ceil((a-1000)/500)*4);
+    }
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/15">
+  var a=Number(prompt("输入a"));
+  var b=Number(prompt("输入b"));
+  var c=Number(prompt("输入c"));
+  if(a%1===0 && b%1===0 && c%1===0){
+    var max=a;
+    if(max<b){
+      max=b;
+    }
+    if(max<c){
+      max=c;
+    }
+    console.log(max);
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/16">
+  var a=Number(prompt("输入a"));
+  var b=Number(prompt("输入b"));
+  var c=Number(prompt("输入c"));
+  if(a>0 && b>0 && c>0 && a%1===0 && b%1===0 && c%1===0){
+    if(a+b<=c || a+c<=b || b+c<=a)
+      console.log("no");
+    else
+      console.log("yes");
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/17">
+  var a=Number(prompt("输入a"));
+  if(0<a && a<3000 && a%1===0){
+    if((a%4==0 && a%100!=0) || a%400==0)
+      console.log("Y");
+    else
+      console.log("N");
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/18">
+  var x=Number(prompt("输入x"));
+  var y=Number(prompt("输入y"));
+  if(x%1===0 && x%1===0){
+    if(-1<=x && x<=1 && -1<=y && y<=1)
+      console.log("yes");
+    else
+      console.log("no");
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/19">
+  var a=Number(prompt("输入a"));
+  var b=Number(prompt("输入b"));
+  var s=String(prompt("输入s"));
+  if(a%1===0 && b%1===0){
+    if(s!="+" && s!="-" && s!="*" && s!="/"){
+      console.log("Invalid operator!");
+    }
+    if(s=="+"){
+      console.log(a+b);
+    }
+    if(s=="-"){
+      console.log(a-b);
+    }
+    if(s=="*"){
+      console.log(a*b);
+    }
+    if(s=="/"){
+      if(b==0)
+      console.log("Divided by zero!");
+      else
+      console.log(a/b);
+    }
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
+
+<script id="ch0104/20">
+  var a=Number(prompt("输入a"));
+  var b=Number(prompt("输入b"));
+  var c=Number(prompt("输入c"));
+  var x1 = ((-b + Math.sqrt(b*b-4*a*c))/(2*a)).toFixed(5);
+  var x2 = ((-b - Math.sqrt(b*b-4*a*c))/(2*a)).toFixed(5);
+  if(b*b == 4*a*c){
+    console.log("x1=x2="+x1);
+  }
+  if(b*b > 4*a*c){
+    console.log("x1="+x1+";x2="+x2+",其中x1>x2");
+  }
+  if(b*b < 4*a*c){
+    var m = (-b/(2*a)).toFixed(5);
+    var n = (Math.sqrt(4*a*c-b*b)/(2*a)).toFixed(5);
+    console.log("x1="+m+"+"+n+"i;x2="+m+"-"+n+"i");
+  }
+</script>
+
+<script id="ch0104/21">
+  var n=Number(prompt("输入n"));
+  var x=Number(prompt("输入x"));
+  var y=String(prompt("输入y"));
+  if(n%1===0 && x%1===0 && y%1===0){
+    if(y/x >= n){
+      console.log(0);
+    }
+    else{
+      console.log(n-Math.ceil(y/x));
+    }
+  }
+  else{
+    console.log("输入不合法！");
+  }
+</script>
 
 
 

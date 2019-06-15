@@ -516,6 +516,242 @@
   }
 </script>
 
+<script id="ch0105/01">
+  var n=Number(prompt("输入n"));
+  var arr=new Array(n);
+  var flag=0;
+  if(n<1 && n>100 && n%1!==0){
+    console.log("输入不合法");
+    flag=1;
+  }
+  if(flag==0){
+    for(var i=0;i<n;i++){
+      arr[i]=Number(prompt("输入第"+(i+1)+"个学生的年龄"));
+      if((arr[i]<15||arr[i]>20)&&arr[i]%1!==arr[i]){
+        console.log("输入不合法");
+        flag=1;
+        break;
+      }
+    }
+    if(flag==0){
+      var sum=0;
+      for(var i=0;i<n;i++){
+        sum+=arr[i];
+      }
+      var avg=(sum/n).toFixed(2);
+      console.log(avg);
+    }
+  }
+</script>
+
+<script id="ch0105/02">
+  var arr=new Array(12);
+  var flag=0;
+  for(var i=0;i<12;i++){
+    arr[i]=Number(prompt("输入第"+(i+1)+"个月的结余"));
+    if(arr[i]>0 && arr[i]<1000000){
+      // arr[i]=Number(arr[i].toFixed(2));
+      // arr[i]=+(arr[i].toFixed(2));
+      arr[i]=Math.floor(arr[i]*100)/100;
+    }
+    else{
+      console.log("输入不合法");
+      flag=1;
+      break;
+    }
+  }
+  if(flag==0){
+    var sum=0;
+    for(var i=0;i<12;i++){
+      sum+=arr[i];
+    }
+    var avg=(sum/12).toFixed(2);
+    console.log("$"+avg);
+  }
+</script>
+
+<script id="ch0105/03">
+  var n=Number(prompt("输入n"));
+  var sum=0;
+  var arr=new Array(n);
+  for(var i=0;i<n;i++){
+    arr[i]=Number(prompt("输入第"+(i+1)+"个浮点数"));
+    sum+=arr[i];
+  }
+  var avg=(sum/n).toFixed(4);
+  console.log(avg);
+</script>
+
+<script id="ch0105/04">
+  var n=Number(prompt("输入n"));
+  var sum=0;
+  for(var i=0;i<n;i++){
+    arr[i]=Number(prompt("输入第"+(i+1)+"个数"));
+    sum+=arr[i];
+  }
+  var avg=(sum/n).toFixed(5);
+  console.log(sum,avg);
+</script>
+
+<script id="ch0105/05">
+  var n=Number(prompt("输入n"));
+  var arr=new Array(n);
+  for(var i=0;i<n;i++){
+    arr[i]=Number(prompt("输入第"+(i+1)+"个数"));
+  }
+  var max=arr[0];
+  for(var i=0;i<n;i++){
+    max=(max>=arr[i])?max:arr[i];
+  }
+  console.log(max);
+</script>
+ 
+<script id="ch0105/06">
+  var n=Number(prompt("输入n"));
+  var arr=new Array(n);
+
+  for(var i=0;i<n;i++){
+    arr[i]=Number(prompt("输入第"+(i+1)+"个数"));
+  }
+  var max=arr[0];
+  var min=arr[0];
+  for(var i=0;i<n;i++){
+    max=(max>=arr[i])?max:arr[i];
+    min=(min<=arr[i])?min:arr[i];
+  }
+  console.log(max-min);
+</script>
+
+<script id="ch0105/07">
+  var n=Number(prompt("输入n"));
+  var arr=new Array(n);
+  for(var i=0;i<n;i++){
+    arr[i] =new Array(3);
+    for(var j=0;j<3;j++){
+      arr[i][j]=Number(prompt("输入第"+(i+1)+"天金、银、铜牌数"));
+    }
+  }
+  var a=0,b=0,c=0,sum=0;
+  for(var i=0;i<n;i++){
+    a += arr[i][0];
+    b += arr[i][1];
+    c += arr[i][2];
+  }
+  sum=a+b+c;
+  console.log(a,b,c,sum);
+</script>
+
+<script id="ch0105/08">
+  var n=Number(prompt("输入n"));
+  var arr=new Array(n);
+  var result=180;
+  for(var i=0;i<n-1;i++){
+    arr[i]=Number(prompt("输入第"+(i+1)+"个角度"));
+    result-=arr[i];
+  }
+  console.log(result);
+</script>
+
+<script id="ch0105/09">
+  var m=Number(prompt("输入m"));
+  var n=Number(prompt("输入n"));
+  var sum=0;
+  for(var i=m;i<=n;i++){
+    if(i%2==1){
+      sum+=i;
+    }
+  }
+  console.log(sum);
+</script>
+
+<script id="ch0105/10">
+  var m=Number(prompt("输入m"));
+  var n=Number(prompt("输入n"));
+  var sum=0;
+  for(var i=m;i<=n;i++){
+    if(i%17==0){
+      sum+=i;
+    }
+  }
+  console.log(sum);
+</script>
+
+<script id="ch0105/11">
+  var n=Number(prompt("输入n"));
+  var a=0,b=0,c=0;
+  var arr=new Array(n);
+  for(var i=0;i<n;i++){
+    arr[i]=Number(prompt("输入第"+(i+1)+"个数"))
+  }
+  for(var i=0;i<n;i++){
+    if(arr[i]==1){
+      a++;
+    }
+    if(arr[i]==5){
+      b++;
+    }
+    if(arr[i]==10){
+      c++;
+    }
+  }
+  console.log(a+'\n'+b+'\n'+c);
+</script>
+
+<script id="ch0105/12">
+  var N=Number(prompt("输入N"));
+  var m=Number(prompt("输入m"));
+  var arr=new Array(N);
+  var count=0;
+  for(var i=0;i<N;i++){
+    arr[i]=Number(prompt("输入第"+(i+1)+"个数"));
+    if(arr[i]==m){
+      count++;
+    }
+  }
+  console.log(count);
+</script>
+
+<script id="ch0105/13">
+  var a=Number(prompt("输入a"));
+  var n=Number(prompt("输入n"));
+  console.log(Math.pow(a,n));
+</script>
+
+<script id="ch0105/14">
+  var x=Number(prompt("输入x"));
+  var n=Number(prompt("输入n"));
+  var result=(x*Math.pow(1.001,n)).toFixed(4);
+  console.log(result);
+</script>
+
+<script id="ch0105/15">
+  var R=Number(prompt("输入R"));
+  var M=Number(prompt("输入M"));
+  var Y=Number(prompt("输入Y"));
+  var result=Math.floor(M*Math.pow(1+R/100,Y));
+  console.log(result);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

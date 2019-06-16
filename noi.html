@@ -585,6 +585,7 @@
 <script id="ch0105/04">
   var n=Number(prompt("输入n"));
   var sum=0;
+  var arr=new Array(n);
   for(var i=0;i<n;i++){
     arr[i]=Number(prompt("输入第"+(i+1)+"个数"));
     sum+=arr[i];
@@ -609,7 +610,6 @@
 <script id="ch0105/06">
   var n=Number(prompt("输入n"));
   var arr=new Array(n);
-
   for(var i=0;i<n;i++){
     arr[i]=Number(prompt("输入第"+(i+1)+"个数"));
   }
@@ -628,7 +628,7 @@
   for(var i=0;i<n;i++){
     arr[i] =new Array(3);
     for(var j=0;j<3;j++){
-      arr[i][j]=Number(prompt("输入第"+(i+1)+"天金、银、铜牌数"));
+      arr[i][j]=Number(prompt("输入第"+(i+1)+"天的第"+(j+1)+"个奖牌数"));
     }
   }
   var a=0,b=0,c=0,sum=0;
@@ -694,7 +694,8 @@
       c++;
     }
   }
-  console.log(a+'\n'+b+'\n'+c);
+  // console.log(a+'\n'+b+'\n'+c);
+  console.log(a,b,c);
 </script>
 
 <script id="ch0105/12">
@@ -731,6 +732,109 @@
   var result=Math.floor(M*Math.pow(1+R/100,Y));
   console.log(result);
 </script>
+
+<script id="ch0105/16">
+  var N=Number(prompt("输入N"));
+  var K=Number(prompt("输入K"));
+  var flag=0;
+  // var M;
+  for(var i=1;i<=20;i++){
+    if(N*i>=200*Math.pow(1+K/100,i-1)){
+      // M=i;
+      // 作用域为一个函数内
+      var M=i;
+      flag=1;
+      break;
+    }
+  }
+  if(flag==0){
+    console.log("Impossible");
+  }
+  else{
+    console.log(M);
+  }
+</script>
+
+<script id="ch0105/17">
+  // function fab(n){
+  //   if(n==1||n==2){
+  //     return 1;
+  //   }
+  //   else{
+  //     return fab(n-2)+fab(n-1);
+  //   }
+  // }
+  // var k=Number(prompt("输入k"));
+  // console.log(fab(k));
+
+  var k=Number(prompt("输入k"));
+  var a=1,b=1,c;
+  while(k>2){
+    c=a+b;
+    a=b;
+    b=c;
+    k--;
+  }
+  console.log(c);
+</script>
+
+<script id="ch0105/18">
+  var n=Number(prompt("输入n"));
+  var arr=new Array(n);
+  for(var i=0;i<n;i++){
+    arr[i]=new Array(2);
+    for(var j=0;j<2;j++){
+      if(i==0){
+        arr[i][j]=prompt("输入鸡尾酒疗法中的第"+(j+1)+"个数据")
+      }
+      else{
+        arr[i][j]=prompt("输入第"+i+"种新疗法中的第"+(j+1)+"个数据")
+      }
+    }
+  }
+  for(var i=1;i<n;i++){
+    var x=arr[1][1]/arr[1][0];
+    var y=arr[i][1]/arr[i][0];
+    if(y-x>0.05){
+      console.log("better");
+    }
+    else if(x-y>0.05){
+      console.log("worse");
+    }
+    else{
+      console.log("same");
+    }
+  }
+</script>
+
+<script id="ch0105/19">
+  var n=Number(prompt("输入n"));
+  var arr=new Array(n);
+  for(var i=0;i<n;i++){
+    arr[i]=new Array(2);
+    for(var j=0;j<3;j++){
+      arr[i][j]=prompt("输入第"+(i+1)+"个屋顶的第"+(j+1)+"个数据")
+    }
+  }
+  var time=0;
+  for(var i=0;i<n;i++){
+    time+=Math.ceil(Math.sqrt(arr[i][0]**2+arr[i][1]**2)/50*2+arr[i][2]*(1+0.5));
+  }
+  console.log(time);
+</script>
+
+<script id="ch0105/20">
+  var h=Number(prompt("输入h"));
+  var sum=h;
+  for(var i=2;i<=10;i++){
+    h=h/2;
+    sum+=h*2;
+  }
+  // for循环为了求10次前的sum而少算了一个第10次的h/2
+  h=h/2;
+  console.log(sum.toFixed(4),h.toFixed(7));
+</script>
+
 
 
 

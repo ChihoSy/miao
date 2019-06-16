@@ -835,8 +835,96 @@
   console.log(sum.toFixed(4),h.toFixed(7));
 </script>
 
+<script id="ch0105/21">
+  var n=Number(prompt("输入n"));
+  if(n>0 && n%1==0){
+    while(n!=1){
+      if(n%2==1){
+        console.log(n+"*3+1="+(3*n+1));
+        n=3*n+1;
+      }
+      else{
+        console.log(n+"/2="+(n/2));
+        n=n/2;
+      }
+    }
+    console.log("End");
+  }
+  else{
+    console.log("输入不合法");
+  }
+</script>
 
+<script id="ch0105/22">
+  function func(){
+    var arr=new Array(12);
+    for(var i=0;i<12;i++){
+      arr[i]=Number(prompt("输入第"+(i+1)+"个月的预算"));
+    }
+    var balance=0,deposit=0;
+    for(var i=0;i<12;i++){
+      balance+=300;
+      balance-=arr[i];
+      if(balance>=100){
+        deposit+=Math.floor(balance/100)*100;
+        balance-=Math.floor(balance/100)*100;
+      }
+      if(balance<0){
+        console.log("-"+(i+1));
+        return 0;
+      }
+    }
+    console.log(deposit*1.2+balance);
+  }
+  func();
+</script>
 
+<script id="ch0105/23">
+  var m=Number(prompt("输入m"));
+  var n=Number(prompt("输入n"));
+  var arr=new Array(n);
+  var count=0;
+  for(var i=0;i<n;i++){
+    arr[i]=Number(prompt("输入第"+(i+1)+"个病人希望取走的药品数量"));
+    if(m-arr[i]>=0){
+      m=m-arr[i];
+    }
+    else{
+      count++;
+    }
+  }
+  console.log(count);
+</script>
+
+<script id="ch0105/24">
+  var n=Number(prompt("输入n"));
+  var arr=new Array(n);
+  for(var i=0;i<n;i++){
+    arr[i]=new Array(2);
+    for(var j=0;j<2;j++){
+      if(j==0)
+        arr[i][j]=Number(prompt("输入第"+(i+1)+"个病人的收缩压"));
+      if(j==1)
+        arr[i][j]=Number(prompt("输入第"+(i+1)+"个病人的舒张压"));
+    }
+  }
+  var count=0,result=0;
+  for(var i=0;i<n;i++){
+    if(90<=arr[i][0]&&arr[i][0]<=140&&60<=arr[i][1]&&arr[i][1]<=90){
+      count++;
+    }
+    else{
+      if(count>result){
+        result=count;
+      }
+      count=0;
+    }
+    if(i==n-1&&count>result){
+      result=count;
+    }
+  }
+  console.log(result);
+</script>
 
 
 

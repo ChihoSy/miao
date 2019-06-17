@@ -1139,27 +1139,214 @@
   //   }
   // }
   // console.log(s);
- </script>
+</script>
 
+<script id="ch0105/32">
+  var n = +prompt("输入n");
+  var sum = 0, p = 1, q = 2;
+  for (var i = 1; i <= n; i++) {
+    sum += q / p;
+    var temp = q;
+    q = q + p;
+    p = temp;
+  }
+  console.log(sum.toFixed(4));
+</script>
 
+<script id="ch0105/33">
+  var n = +prompt("输入n");
+  var sum = 0;
+  for (var i = 1; i <= n; i++) {
+    if (i % 2 == 1) {
+      sum += 1 / i;
+    }
+    else {
+      sum -= 1 / i
+    }
+  }
+  console.log(sum.toFixed(4));
+</script>
 
+<script id="ch0105/34">
+  var n = +prompt("输入n");
+  var sum = 0;
+  for (var i = 1; i <= n; i++) {
+    var j = i;
+    var temp = 1;
+    while (j) {
+      temp *= j;
+      j--;
+    }
+    sum += temp;
+  }
+  console.log(sum);
+</script>
 
+<script id="ch0105/35">
+  var n = +prompt("输入n");
+  var sum = 1;
+  for (var i = 1; i <= n; i++) {
+    var j = i;
+    var temp = 1;
+    while (j) {
+      temp *= j;
+      j--;
+    }
+    sum += 1 / temp;
+  }
+  console.log(sum.toFixed(10));
+</script>
 
+<script id="ch0105/36">
+  var x = +prompt("输入x");
+  var n = +prompt("输入n");
+  var sum = 0;
+  while (n >= 0) {
+    sum += Math.pow(x, n);
+    n--;
+  }
+  console.log(sum.toFixed(2));
+</script>
 
+<script id="ch0105/37">
+  var M = +prompt("输入M");//体力最大值
+  var N = +prompt("输入N");//战斗力
+  var X = +prompt("输入X");//能量元素
+  var vit = 0;//体力
+  // var n=N;//每连续战斗n天，则N+1
+  while (X >= 0) {
+    X -= Math.ceil(M / N);
+    via = M;
+    // N+=Math.floor(M/n);
+    // n=N;
+    N += Math.floor(M / N);
+    via = 0;
+  }
+  console.log(N);
+</script>
 
+<script id="ch0105/38">
+  看不懂题
+</script>
 
+<script id="ch0105/39">
+  var n = +prompt("输入n");
+  var sum = 0;
+  for (var i = 1; i <= n; i++) {
+    var a = Math.floor(i / 10);
+    var b = i % 10;
+    if (i % 7 != 0 && a != 7 && b != 7) {
+      sum += i * i;
+    }
+  }
+  console.log(sum);
+</script>
 
+<script id="ch0105/40">
+  var n = +prompt("输入n");
+  var count = 0;
+  for (var i = 1; i <= n; i++) {
+    var a = Math.floor(i / 10000);
+    var b = Math.floor(i / 1000) % 10;
+    var c = Math.floor(i / 100) % 10;
+    var d = Math.floor(i / 10) % 10;
+    var e = i % 10;
+    if (a == 1) {
+      count++;
+    }
+    if (b == 1) {
+      count++;
+    }
+    if (c == 1) {
+      count++;
+    }
+    if (d == 1) {
+      count++;
+    }
+    if (e == 1) {
+      count++;
+    }
+  }
+  console.log(count);
+</script>
 
+<script id="ch0105/41">
+  var L = +prompt("输入L");
+  var R = +prompt("输入R");
+  var count = 0;
+  for (var i = L; i <= R; i++) {
+    var a = Math.floor(i / 10000);
+    var b = Math.floor(i / 1000) % 10;
+    var c = Math.floor(i / 100) % 10;
+    var d = Math.floor(i / 10) % 10;
+    var e = i % 10;
+    if (a == 2) {
+      count++;
+    }
+    if (b == 2) {
+      count++;
+    }
+    if (c == 2) {
+      count++;
+    }
+    if (d == 2) {
+      count++;
+    }
+    if (e == 2) {
+      count++;
+    }
+  }
+  console.log(count);
+</script>
 
+<script id="ch0105/42">
+  var h = +prompt("输入h");//高
+  var w = +prompt("输入w");//宽
+  var s = String(prompt("输入s"));//字符
+  var k = +prompt("输入k");//空心、实心
+  if (k == 0) {
+    var str = "";
+    for (var i = 0; i < w; i++) {
+      str += s;
+    }
+    str += "\n";
+    for (var j = 1; j < h - 1; j++) {
+      str += s;
+      for (var i = 1; i < w - 1; i++) {
+        str += " ";
+      }
+      str += s + "\n";
+    }
+    for (var i = 0; i < w; i++) {
+      str += s;
+    }
+    console.log(str);
+  }
+  else {
+    var str = "";
+    for (var j = 0; j < h; j++) {
+      for (var i = 0; i < w; i++) {
+        str += s;
+      }
+      str += "\n";
+    }
+    console.log(str);
+  }
+</script>
 
-
-
-
-
-
-
-
-
-
-
-
+<!-- <script id="ch0105/43">
+  var n=+prompt("输入n");
+  for(var i=2;i<n;i++){ // i 和 n/i
+    var flag=0;
+    for(var j=2;j<n;j++){ 
+      if(i%j==0||n/i%j==0){
+        flag=1;
+        break;
+      }
+    }
+    if(flag==0){
+      var max= i>n/i?i:n/i;
+    }
+  }
+  console.log(max);
+</script> -->

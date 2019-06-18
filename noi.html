@@ -1630,19 +1630,21 @@
   var max = a > b ? a : b;
   var min = a < b ? a : b;
   var lcf, lcm;
+  //最大公约数
   for (var i = min; i > 0; i--) {
     if (a % i == 0 && b % i == 0) {
       lcf = i;
       break;
     }
   }
+  //最小公倍数
   for (var i = max; ; i++) {
     if (i % a == 0 && i % b == 0) {
       lcm = i;
       break;
     }
   }
-  console.log(lcf, lcm);
+  console.log(lcm, lcf);
 </script>
 
 <script id="sqrt">

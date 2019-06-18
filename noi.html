@@ -927,13 +927,13 @@
 </script>
 
 <script id="ch0105/25">
-  var st, nt;
-  var s = 100;
+  var s = 100;//s七进制
+  var st, nt;//st七进制转成的十进制，nt九进制转成的十进制
   while (100 <= s && s <= 666) {
     var x = Math.floor(s / 100);
     var y = Math.floor(s / 10) % 10;
     var z = s % 10;
-    var n = x + y * 10 + z * 100;
+    var n = x + y * 10 + z * 100;//n九进制
     if (100 <= n && n <= 888 && 0 <= x && x <= 6 && 0 <= y && y <= 6 && 0 <= z && z <= 6) {
       st = x * Math.pow(7, 2) + y * Math.pow(7, 1) + z * Math.pow(7, 0);
       nt = z * Math.pow(9, 2) + y * Math.pow(9, 1) + x * Math.pow(9, 0);
@@ -1402,7 +1402,258 @@
   // 4444
   // 55 5 55
   // 666666
+
+  // 方法二:
+  // var n = +prompt("输入n");
+  // var sum = 0;
+  // for(var i = 1;i <=n;i++) {
+  //     n = n - i;
+  //     sum += i * i;
+  // } 
+  // sum = sum + i * n;
+  // console.log(sum);
 </script>
+
+<script id="7">
+  var n = +prompt("输入n");
+  var num = 0;
+  var flag = 0;
+  while (parseInt(n / Math.pow(10, num))) {
+    if (parseInt(n / Math.pow(10, num)) % 10 == 7) {
+      flag = 1;
+    }
+    num++;
+  }
+  if (n % 7 == 0) {
+    flag = 1;
+  }
+  if (flag == 1) {
+    console.log("YES");
+  }
+  else {
+    console.log("NO");
+  }
+</script>
+
+<script id="sort">
+  var a = +prompt("输入a");
+  var b = +prompt("输入b");
+  var c = +prompt("输入c");
+  if (a > b) {
+    var temp = a;
+    a = b;
+    b = temp;
+  }
+  if (a > c) {
+    var temp = a;
+    a = c;
+    c = temp;
+  }
+  if (b > c) {
+    var temp = b;
+    b = c;
+    c = temp;
+  }
+  console.log(a, b, c);
+</script>
+
+<script id="narcissistic">
+  var n = +prompt("输入n");
+  var num = 0, sum = 0;
+  while (parseInt(n / Math.pow(10, num))) {
+    num++;
+  }
+  for (var i = 0; i <= num; i++) {
+    sum += Math.pow(parseInt(n / Math.pow(10, i)) % 10, num);
+  }
+  if (sum == n && n >= 100) {
+    console.log("YES");
+  }
+  else {
+    console.log("NO");
+  }
+</script>
+
+<script id="narcissistics">
+  function shuiXian(n) {
+    var num = 0, sum = 0;
+    while (parseInt(n / Math.pow(10, num))) {
+      num++;
+    }
+    for (var i = 0; i <= num; i++) {
+      sum += Math.pow(parseInt(n / Math.pow(10, i)) % 10, num);
+    }
+    if (sum == n && n >= 100) {
+      console.log(n);
+    }
+  }
+  for (var i = 0; i <= 1000; i++) {
+    shuiXian(i);
+  }
+</script>
+
+<script id="palindrom">
+  var n = +prompt("输入n");
+  var num = 0;
+  while (parseInt(n / Math.pow(10, num))) {
+    num++;
+  }
+  var flag = 0;
+
+  var a = Math.pow(10, num - 1);
+  var b = 1;
+  while (a > b) {
+    if (Math.floor(n / a) % 10 != Math.floor(n / b) % 10) {
+      flag = 1;
+      break;
+    }
+    a /= 10;
+    b *= 10;
+  }
+
+  // for (var i = 0; i <= num / 2; i++) {
+  //   if (parseInt(n / Math.pow(10, i)) % 10 != parseInt(n / Math.pow(10, num - i - 1)) % 10) {
+  //     flag = 1;
+  //   }
+  // }
+
+  if (flag == 0) {
+    console.log("YES");
+  }
+  else {
+    console.log("NO");
+  }
+</script>
+
+<script id="weekday">
+  var year = +prompt("输入year");
+  var month = +prompt("输入month");
+  var sum = 0;//距离公元0年0月0天的天数
+  for (var i = 1; i < year; i++) {//没有公元0年，只有公元元年(公元1年)
+    if ((i % 4 == 0 && i % 100 != 0) || i % 400 == 0) {
+      sum += 366;
+    }
+    else {
+      sum += 365;
+    }
+  }
+  for (var i = 0; i < month; i++) {
+    if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12) {
+      sum += 31;
+    }
+    if (i == 4 || i == 6 || i == 9 || i == 11) {
+      sum += 30;
+    }
+    if (i == 2) {
+      if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        sum += 29;
+      }
+      else {
+        sum += 28;
+      }
+    }
+  }
+  console.log(sum % 7 + 1);
+  // 0001 365   31 27 31 30 31 30 31 31 30 31 30 31
+  // 0002 366   31 28 31 30 31 30 31 31 30 31 30 31
+</script>
+
+<script id="complete-number">
+  var n = +prompt("输入n");
+  var sum = 0;
+  for (var i = 1; i < n; i++) {
+    if (n % i == 0) {
+      sum += i;
+    }
+  }
+  if (sum == n) {
+    console.log("YES");
+  }
+  else {
+    console.log("NO");
+  }
+</script>
+
+<script id="complete-numbers">
+  for (var n = 2; n <= 1000; n++) {
+    var sum = 0;
+    for (var i = 1; i < n; i++) {
+      if (n % i == 0) {
+        sum += i;
+      }
+    }
+    if (sum == n) {
+      console.log(n);
+    }
+  }
+</script>
+
+<script id="prime">
+  var n = +prompt("输入n");
+  var flag = 0;
+  for (var i = 2; i < n; i++) {
+    if (n % i == 0) {
+      flag = 1;
+    }
+  }
+  if (flag == 0 && n > 1) {
+    console.log("YES");
+  }
+  else {
+    console.log("NO");
+  }
+</script>
+
+<script id="primes">
+  for (var n = 2; n < 100; n++) {
+    var flag = 0;
+    for (var i = 2; i < n; i++) {
+      if (n % i == 0) {
+        flag = 1;
+      }
+    }
+    if (flag == 0) {
+      console.log(n);
+    }
+  }
+</script>
+
+<script id="itob">
+  var n = +prompt("输入n");
+  console.log("" + n);
+  // console.log(String(n));
+</script>
+
+<script id="lcf&lcm">
+  var a = +prompt("输入a");
+  var b = +prompt("输入b");
+  var max = a > b ? a : b;
+  var min = a < b ? a : b;
+  var lcf, lcm;
+  for (var i = min; i > 0; i--) {
+    if (a % i == 0 && b % i == 0) {
+      lcf = i;
+      break;
+    }
+  }
+  for (var i = max; ; i++) {
+    if (i % a == 0 && i % b == 0) {
+      lcm = i;
+      break;
+    }
+  }
+  console.log(lcf, lcm);
+</script>
+
+<script id="sqrt">
+  var a = +prompt("输入a");
+  console.log(Math.sqrt(a).toFixed(3));
+</script>
+
+
+
+
+
 
 
 

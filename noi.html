@@ -1334,19 +1334,81 @@
   }
 </script>
 
-<!-- <script id="ch0105/43">
-  var n=+prompt("输入n");
-  for(var i=2;i<n;i++){ // i 和 n/i
-    var flag=0;
-    for(var j=2;j<n;j++){ 
-      if(i%j==0||n/i%j==0){
-        flag=1;
+<script id="ch0105/43">
+  var n = +prompt("输入n");
+  for (var i = 2; i < n; i++) {
+    if (n % i == 0) {
+      var flag1 = 0;
+      var flag2 = 0;
+      for (var j = 2; j < i; j++) {
+        if (i % j == 0) {
+          flag1 = 1;
+        }
+      }
+      for (var j = 2; j < n / i; j++) {
+        if (n / i % j == 0) {
+          flag2 = 1;
+        }
+      }
+      if (flag1 == 0 && flag2 == 0) {
+        console.log(i > n / i ? i : n / i);
         break;
       }
     }
-    if(flag==0){
-      var max= i>n/i?i:n/i;
+  }
+</script>
+
+<script id="ch0105/44">
+  var n = +prompt("输入n");
+  var prime;
+  var k = 2;
+  while (n) {
+    var flag = 0;
+    for (var i = 2; i < k; i++) {
+      if (k % i == 0) {
+        flag = 1;
+      }
+    }
+    if (flag == 0) {
+      prime = k;
+      n--;
+    }
+    k++;
+  }
+  console.log(prime);
+</script>
+
+<script id="ch0105/45">
+  var n = +prompt("输入n");
+  // k为第n个数字所在的行号，a为前k行的数字个数
+  var a = 0, k = 0;
+  while (a < n) {
+    k++;
+    a += k;
+  }
+  // 求前k-1行的数字大小总和
+  var sum = 0;
+  for (var i = 1; i <= k - 1; i++) {
+    for (var j = 1; j <= i; j++) {
+      sum += i;
     }
   }
-  console.log(max);
-</script> -->
+  // a-k为前k-1行的数字个数，n-(a-k)为n在k行的位置
+  sum += (n - (a - k)) * k;
+  console.log(sum);
+  // 1
+  // 22
+  // 333
+  // 4444
+  // 55 5 55
+  // 666666
+</script>
+
+
+
+
+
+
+
+
+

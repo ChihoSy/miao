@@ -536,7 +536,7 @@ span.flag{
   border-color: #949494;
   background-color: #ffe8df;
   cursor: pointer;
-}       
+}
 
 /* checked高亮 */
 .home-hero-container .home-hero-slider input:nth-of-type(1):checked ~ div.ui-page-items label:nth-child(1){
@@ -700,14 +700,12 @@ span.flag{
 }
 .page-main .page-main-phone{
   height: 1000px;
-  
-  background-color: #87CEEB;
 
 }
-.page-main .page-main-phone .box-top{
+.page-main .box-top{
   height:58px;
 }
-.page-main .page-main-phone .box-top .title{
+.page-main .box-top .title{
   margin:0;
   font-size: 22px;
   font-weight: 200;
@@ -716,23 +714,74 @@ span.flag{
   line-height: 58px;
   float:left;
 }
-.page-main .page-main-phone .box-top .view-all{
+.page-main .box-top .view-all{
   /* width: 92px; */
   height: 58px;
   line-height: 58px;
   float:right;
 }
-.page-main .page-main-phone .box-top .view-all a{
+.page-main .box-top .view-all a{
   font-size: 16px;
   color: #424242;
   transition: color 1s;
 }
-.page-main .page-main-phone .box-top .view-all a:hover{
+.page-main .box-top .view-all a:hover{
   color: #ff6700;
 }
-.page-main .page-main-phone .box-top .view-all a i.iconfont{
+.page-main .box-top .view-all a i.iconfont{
   font-size: 20px;
   margin-left: 5px;
   position: relative;
   top: 2px;
+}
+.page-main .box-middle{
+  height:628px;
+  /* float:left; */
+
+}
+.page-main .box-middle ul.brick-promo-list{
+  margin: 0;
+  padding:0;
+  width: 234px;
+  height:628px;
+  background-color: lime;
+  float:left;
+}
+.page-main .box-middle ul.brick-promo-list li.brick-item{
+  width: 234px;
+}
+.page-main .box-middle ul.brick-promo-list li.brick-item a{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.page-main .box-middle ul.brick-promo-list li.brick-item a img{
+  width: 100%;
+  height: 100%;
+}
+.page-main .box-middle ul.brick-list{
+  width:992px;
+  height:628px;
+  background-color: gray;
+  padding:0;
+  margin:0;
+  float:left;
+}
+.page-main .box-middle ul.brick-list li{
+  border:1px solid;
+  box-sizing: border-box;
+  width: 234px;
+  height: 300px;
+  margin-left:14px;
+  margin-bottom:14px;
+  float:left;
+}
+.page-main .box-middle li.brick-item-l{
+  height: 614px;
+}
+.page-main .box-middle li.brick-item-m{
+  height: 143px;
+}
+.page-main .box-middle li.brick-item-s{
+  height: 143px;
 }

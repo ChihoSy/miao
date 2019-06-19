@@ -1005,11 +1005,18 @@
   while (parseInt(n / Math.pow(10, num))) {
     num++;
   }
+
   while (parseInt(n / Math.pow(10, i))) {
     var onesDigit = parseInt(n / Math.pow(10, i)) % 10;
     i++;
     sum += onesDigit * Math.pow(10, num - i);
   }
+  // while (n != 0) {
+  //   var onesDigit = n % 10;
+  //   sum = sum * 10 + onesDigit;
+  //   n = parseInt(n / 10);
+  //   // n = (n - onesDigit) / 10;
+  // }
   console.log(sum);
 
   // var n = +prompt("输入-1,000,000,000到1,000,000,000范围内的整数n");
@@ -1226,7 +1233,19 @@
 </script>
 
 <script id="ch0105/38">
-  看不懂题
+  var n = +prompt("输入n");
+  var m = n;
+  var s = "";
+  for (var i = 1; i <= n + 1; i++) {
+    var a = +prompt("输入a");
+    if (i < n) {
+      s += a * (m--) + " ";
+    }
+    else if (i == n) {
+      s += a * m;
+    }
+  }
+  console.log(s);
 </script>
 
 <script id="ch0105/39">
@@ -1245,29 +1264,42 @@
 <script id="ch0105/40">
   var n = +prompt("输入n");
   var count = 0;
+
   for (var i = 1; i <= n; i++) {
-    var a = Math.floor(i / 10000);
-    var b = Math.floor(i / 1000) % 10;
-    var c = Math.floor(i / 100) % 10;
-    var d = Math.floor(i / 10) % 10;
-    var e = i % 10;
-    if (a == 1) {
-      count++;
-    }
-    if (b == 1) {
-      count++;
-    }
-    if (c == 1) {
-      count++;
-    }
-    if (d == 1) {
-      count++;
-    }
-    if (e == 1) {
-      count++;
+    var m = i
+    while (m > 0) {
+      var digit = m % 10;
+      if (digit == 1) {
+        count++;
+      }
+      m = parseInt(m / 10);
     }
   }
   console.log(count);
+
+  // for (var i = 1; i <= n; i++) {
+  //   var a = Math.floor(i / 10000);
+  //   var b = Math.floor(i / 1000) % 10;
+  //   var c = Math.floor(i / 100) % 10;
+  //   var d = Math.floor(i / 10) % 10;
+  //   var e = i % 10;
+  //   if (a == 1) {
+  //     count++;
+  //   }
+  //   if (b == 1) {
+  //     count++;
+  //   }
+  //   if (c == 1) {
+  //     count++;
+  //   }
+  //   if (d == 1) {
+  //     count++;
+  //   }
+  //   if (e == 1) {
+  //     count++;
+  //   }
+  // }
+  // console.log(count);
 </script>
 
 <script id="ch0105/41">
@@ -1651,17 +1683,3 @@
   var a = +prompt("输入a");
   console.log(Math.sqrt(a).toFixed(3));
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

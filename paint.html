@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="400" height="300"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated'
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * YOUR TASK
+画图的题：
+画一条实线
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+画一个rgb色彩空间的某一面
+画一个空心的圆
+画一个实心的圆
+画一个大小合适的sin(x)的图像
+   */
+</script>
+<script>
+  // YOUR CODE GOES BELOW
+  for(var i=20;i<300;i++){
+    dot(i,20,'black');
+  }
+  for(var i=20;i<300;i=i+2){
+    dot(i,30,'black');
+  }
+  for(var i=20;i<300;i=i+4){
+    dot(i,40,'black');
+    dot(i+1,40,'black');
+  }
+  for(var i=20;i<300;i=i+5){
+    dot(i,50,'black');
+    dot(i+1,50,'black');
+    dot(i+2,50,'black');
+  }
+  //斜线
+  for(var i=60;i<200;i++){
+    dot(i,i,'black');
+  }
+  // 一条跨越画布左上角和右下角的对角线
+  for(var i=0;i<400;i++){
+    dot(i,i*3/4,'black');
+  }
+
+  //空心矩形
+  for(var i=0;i<100;i++){
+    dot(i,150,'black');
+    dot(i,250,'black');
+    dot(0,i+150,'black');
+    dot(100,i+150,'black');
+  }
+  //实心矩形
+  for(var i=50;i<100;i++){
+    for(var j=50;j<100;j++){
+      dot(i+80,j+175,'SpringGreen');
+    }
+  }
+  //画一个rgb色彩空间的某一面
+  for(var i=0;i<=255;i++){
+    for(var j=0;j<=255;j++){
+      var color="rgb("+i+","+j+","+200+")";
+      dot(i/5+320,j/5+20,color);
+    }
+  }
+  // 画一个空心的圆
+  for(var i=120;i<220;i++){
+    for(var j=120;j<220;j++){
+      var r2=Math.pow(i-170,2)+Math.pow(j-170,2);
+      if(49<=Math.sqrt(r2)&&Math.sqrt(r2)<=51){
+        dot(i,j,"red");
+      }
+    }
+  }
+  // 画一个实心的圆
+  for(var i=250;i<350;i++){
+    for(var j=120;j<220;j++){
+      var r2=Math.pow(i-300,2)+Math.pow(j-170,2);
+      if(Math.sqrt(r2)<=50){
+        dot(i,j,"DeepSkyBlue");
+      }
+    }
+  }
+  // 画一个大小合适的sin(x)的图像
+  for(var i=0;i<100;i=i+0.01){
+    dot(i*5,Math.sin(i)*10+100,"black");
+  }
+
+</script>
+</html>

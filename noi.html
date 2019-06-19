@@ -1233,19 +1233,22 @@
 </script>
 
 <script id="ch0105/38">
-  var n = +prompt("输入n");
-  var m = n;
-  var s = "";
-  for (var i = 1; i <= n + 1; i++) {
-    var a = +prompt("输入a");
-    if (i < n) {
-      s += a * (m--) + " ";
+  var ss = +prompt("输入几组数据");
+  for(var j=0;j<ss;j++){
+    var n = +prompt("输入n");
+    var m = n;
+    var s = "";
+    for (var i = 1; i <= n + 1; i++) {
+      var a = +prompt("输入a");
+      if (i < n) {
+        s += a * (m--) + " ";
+      }
+      else {
+        s += a * m;
+      }
     }
-    else if (i == n) {
-      s += a * m;
-    }
+    console.log(s);
   }
-  console.log(s);
 </script>
 
 <script id="ch0105/39">

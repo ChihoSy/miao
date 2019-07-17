@@ -76,5 +76,6 @@ var chihosy = function () {
     difference,
     drop,
 
-  }()
-}
+  }
+  
+}()

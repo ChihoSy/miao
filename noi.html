@@ -1449,6 +1449,21 @@
   // console.log(sum);
 </script>
 
+<!-- 
+7: 输入一个数，输出其是否是7的倍数或各个位上是否有7（25：NO，27：YES，21：YES)
+sort: 输入3个数，按从小到大顺序输出
+narcissistic: 输入一个数判断其是否为水仙花数，输出"YES"/"NO"
+narcissistics: 输出1000以内的水仙花数
+palindrom: 输入一个数，判断其是否为一个一个回文数"YES"/"NO"
+weekday: 输入年份与月份，输出这此年此月的第一天为星期几（0对应周日，1对应周一）
+complete-number: 输入一个数判断其是否为完数，输出"YES"/"NO"
+complete-numbers: 输出1000以内的完数
+prime: 输入一个数判断其是否为素数数，输出"YES"/"NO"
+primes: 输出100以内的素数
+itob: 输入一个数，输出其字符串形式
+lcf&lcm: 输入两个数，分别输出它们的最大公约数和最小公倍数
+sqrt: 输入一个数，输出其平方根，精确到小数点后3位 -->
+
 <script id="7">
   var n = +prompt("输入n");
   var num = 0;
@@ -1493,6 +1508,7 @@
 </script>
 
 <script id="narcissistic">
+  // 水仙花数
   var n = +prompt("输入n");
   var num = 0, sum = 0;
   while (parseInt(n / Math.pow(10, num))) {
@@ -1528,6 +1544,7 @@
 </script>
 
 <script id="palindrom">
+  // 回文数
   var n = +prompt("输入n");
   var num = 0;
   while (parseInt(n / Math.pow(10, num))) {

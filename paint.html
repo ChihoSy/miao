@@ -90,11 +90,21 @@
   for(var i=120;i<220;i++){
     for(var j=120;j<220;j++){
       var r2=Math.pow(i-170,2)+Math.pow(j-170,2);
-      if(49<=Math.sqrt(r2)&&Math.sqrt(r2)<=51){
+      // if(49<=Math.sqrt(r2)&&Math.sqrt(r2)<=51){
+      //   dot(i,j,"red");
+      // }
+      if(Math.floor(Math.sqrt(r2))==45){
         dot(i,j,"red");
       }
     }
   }
+// ！
+  for(var i=0;i<=2*Math.PI;i+=0.01){
+    var x=Math.sin(i)*50;
+    var y=Math.cos(i)*50;
+    dot(x+200,y+150);
+  }
+
   // 画一个实心的圆
   for(var i=250;i<350;i++){
     for(var j=120;j<220;j++){
@@ -104,6 +114,15 @@
       }
     }
   }
+// ！
+for(var r=50;r>=0;r--){
+  for(var i=0;i<=2*Math.PI;i+=0.01){
+    var x=Math.sin(i)*r;
+    var y=Math.cos(i)*r; 
+    dot(x+100,y+100,"SkyBlue");
+  }
+}
+
   // 画一个大小合适的sin(x)的图像
   for(var i=0;i<100;i=i+0.01){
     dot(i*5,Math.sin(i)*10+100,"black");

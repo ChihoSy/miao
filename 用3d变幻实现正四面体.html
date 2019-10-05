@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>正四面体 难做 没写完</title>
+  <style>
+    .tetrahedron{
+      width: 500px;
+      height: 500px;
+      /* background-color: cornflowerblue; */
+      position: relative;
+      transform-style: preserve-3d;
+      perspective: 500px;
+    }
+    .tetrahedron div{
+      font-size: 50px;
+    }
+    .tetrahedron:hover{
+      transform: rotateY(60deg) rotateX(60deg) rotateZ(60deg);
+      transition: 5s;
+    }
+    .t1{
+      position: absolute;
+      left:100px;
+      top:100px;
+
+      /* border-top: 100px solid transparent;
+      border-bottom: 100px solid  aquamarine;
+      border-right: 100px solid transparent;
+      border-left: 100px solid transparent; */
+
+      width: 0px;
+      height: 0px;
+      border:100px solid transparent;
+      border-bottom: 100px solid aquamarine;
+      transform-origin:center bottom;
+      transform: translateX(50px) translateY(50px) rotateX(-90deg);
+    }
+    .t2{
+      position: absolute;
+      left:100px;
+      top:100px;
+
+      width: 0px;
+      height: 0px;
+      border:100px solid transparent;
+      border-bottom: 100px solid cyan;
+      transform-origin:center bottom;
+      transform: translateX(50px) translateY(50px) rotateX(-19.5deg);
+      
+    }
+    .t3{
+      position: absolute;
+      left:100px;
+      top:100px;
+
+      width: 0px;
+      height: 0px;
+      border:100px solid transparent;
+      border-bottom: 100px solid cyan;
+      transform: translateX(80px) translateY(50px) rotateY(60deg) rotateX(19.5deg);
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="tetrahedron">
+    <div class="t1">1</div>
+    <div class="t2">2</div>
+    <div class="t3">3</div>
+    <div class="t4">4</div>
+  </div>
+</body>
+</html>
